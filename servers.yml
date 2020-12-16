@@ -143,4 +143,5 @@ Resources:
 
 Outputs:
   LB:
-    Value: !GetAtt WebAppLB.DNSName
+    Description: "My Application address"
+    Value: !Join ["", ["http://", !GetAtt WebAppLB.DNSName]]
