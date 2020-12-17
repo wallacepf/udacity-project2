@@ -1,0 +1,107 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:940345621114:stack/networking-stack/ff6e9790-4019-11eb-9995-02f97eddb891",
+            "StackName": "networking-stack",
+            "Description": "My Network Stack for Project 2\n",
+            "Parameters": [
+                {
+                    "ParameterKey": "PrivateSubnet1CIDR",
+                    "ParameterValue": "10.0.20.0/24"
+                },
+                {
+                    "ParameterKey": "PublicSubnet2CIDR",
+                    "ParameterValue": "10.0.11.0/24"
+                },
+                {
+                    "ParameterKey": "VpcCIDR",
+                    "ParameterValue": "10.0.0.0/16"
+                },
+                {
+                    "ParameterKey": "EnvironmentName",
+                    "ParameterValue": "Project2"
+                },
+                {
+                    "ParameterKey": "PrivateSubnet2CIDR",
+                    "ParameterValue": "10.0.21.0/24"
+                },
+                {
+                    "ParameterKey": "PublicSubnet1CIDR",
+                    "ParameterValue": "10.0.10.0/24"
+                }
+            ],
+            "CreationTime": "2020-12-17T03:43:17.082Z",
+            "RollbackConfiguration": {},
+            "StackStatus": "CREATE_COMPLETE",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Outputs": [
+                {
+                    "OutputKey": "VPCPublicRouteTable",
+                    "OutputValue": "rtb-07ea09128cd920dee",
+                    "Description": "Public Routing",
+                    "ExportName": "Project2-PUB-RT"
+                },
+                {
+                    "OutputKey": "PrivateSubnet1",
+                    "OutputValue": "subnet-01f9a40d72453bf88",
+                    "Description": "A reference to the private subnet in the 1st Availability Zone",
+                    "ExportName": "Project2-PRI1-SN"
+                },
+                {
+                    "OutputKey": "PrivateSubnet2",
+                    "OutputValue": "subnet-02e319f769651768f",
+                    "Description": "A reference to the private subnet in the 2nd Availability Zone",
+                    "ExportName": "Project2-PRI2-SN"
+                },
+                {
+                    "OutputKey": "PrivateSubnets",
+                    "OutputValue": "subnet-01f9a40d72453bf88,subnet-02e319f769651768f",
+                    "Description": "A list of the private subnets",
+                    "ExportName": "Project2-PRIV-NETS"
+                },
+                {
+                    "OutputKey": "VPC",
+                    "OutputValue": "vpc-0edc875b68ba4864f",
+                    "Description": "A reference to the created VPC",
+                    "ExportName": "Project2-VPCID"
+                },
+                {
+                    "OutputKey": "PublicSubnets",
+                    "OutputValue": "subnet-0a1aabaecbc3ca224,subnet-007088bd458b8e5e7",
+                    "Description": "A list of the public subnets",
+                    "ExportName": "Project2-PUB-NETS"
+                },
+                {
+                    "OutputKey": "PublicSubnet2",
+                    "OutputValue": "subnet-007088bd458b8e5e7",
+                    "Description": "A reference to the public subnet in the 2nd Availability Zone",
+                    "ExportName": "Project2-PUB2-SN"
+                },
+                {
+                    "OutputKey": "VPCPrivateRouteTable1",
+                    "OutputValue": "rtb-0efb7401b96d67dc1",
+                    "Description": "Private Routing AZ1",
+                    "ExportName": "Project2-PRI1-RT"
+                },
+                {
+                    "OutputKey": "VPCPrivateRouteTable2",
+                    "OutputValue": "rtb-012abfb8dd34d6747",
+                    "Description": "Private Routing AZ2",
+                    "ExportName": "Project2-PRI2-RT"
+                },
+                {
+                    "OutputKey": "PublicSubnet1",
+                    "OutputValue": "subnet-0a1aabaecbc3ca224",
+                    "Description": "A reference to the public subnet in the 1st Availability Zone",
+                    "ExportName": "Project2-PUB1-SN"
+                }
+            ],
+            "Tags": [],
+            "EnableTerminationProtection": false,
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}

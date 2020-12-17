@@ -1,0 +1,51 @@
+{
+    "Stacks": [
+        {
+            "StackId": "arn:aws:cloudformation:us-west-2:940345621114:stack/server-stack/fc0d4eb0-401a-11eb-b5a2-06945ba32212",
+            "StackName": "server-stack",
+            "Description": "My Server Stack for Project 2\n",
+            "Parameters": [
+                {
+                    "ParameterKey": "InstanceSize",
+                    "ParameterValue": "t2.medium"
+                },
+                {
+                    "ParameterKey": "EnvironmentName",
+                    "ParameterValue": "Project2"
+                },
+                {
+                    "ParameterKey": "InstanceEBSVolumeSize",
+                    "ParameterValue": "10"
+                },
+                {
+                    "ParameterKey": "ImgId",
+                    "ParameterValue": "ami-0ac73f33a1888c64a"
+                },
+                {
+                    "ParameterKey": "AutoScaleDesiredCapacity",
+                    "ParameterValue": "4"
+                }
+            ],
+            "CreationTime": "2020-12-17T03:50:37.179Z",
+            "RollbackConfiguration": {},
+            "StackStatus": "CREATE_COMPLETE",
+            "DisableRollback": false,
+            "NotificationARNs": [],
+            "Capabilities": [
+                "CAPABILITY_IAM"
+            ],
+            "Outputs": [
+                {
+                    "OutputKey": "LB",
+                    "OutputValue": "http://serve-WebAp-1OT3C9T21O5AW-1630990659.us-west-2.elb.amazonaws.com",
+                    "Description": "My Application address"
+                }
+            ],
+            "Tags": [],
+            "EnableTerminationProtection": false,
+            "DriftInformation": {
+                "StackDriftStatus": "NOT_CHECKED"
+            }
+        }
+    ]
+}
