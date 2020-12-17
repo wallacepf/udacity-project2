@@ -6,6 +6,22 @@ Parameters:
     EnvironmentName:
         Description: An environment name that will be prefixed to resource names
         Type: String
+    
+    ImgId:
+        Description: Image id that will be used in our instances
+        Type: String
+    
+    InstanceSize:
+        Description: Instance size for our application
+        Type: String
+
+    InstanceEBSVolumeSize:
+        Description: The Size of the Inst Disk
+        Type: String
+    
+    AutoScaleDesiredCapacity:
+        Description: Desired Capacity for the AS Group
+        Type: String
 
 Resources:
 
@@ -69,15 +85,14 @@ Resources:
           aws s3 cp s3://myudacity-project2/udacity.zip .
           unzip -o udacity.zip
       IamInstanceProfile: !Ref ProfileWithRolesForOurApp
-      ImageId: ami-0ac73f33a1888c64a
-      KeyName: that-one
+      ImageId: !Ref ImgId
       SecurityGroups:
       - Ref: WebServerSecGroup
-      InstanceType: t2.medium
+      InstanceType: !Ref InstanceSize
       BlockDeviceMappings:
       - DeviceName: "/dev/sdk"
         Ebs:
-          VolumeSize: '10'
+          VolumeSize: !Ref InstanceEBSVolumeSize
 
   WebAppGroup:
     Type: AWS::AutoScaling::AutoScalingGroup
@@ -88,8 +103,8 @@ Resources:
       LaunchConfigurationName:
         Ref: WebAppLaunchConfig
       MinSize: '2'
-      MaxSize: '4'
-      DesiredCapacity: '4'
+      MaxSize: '6'
+      DesiredCapacity: !Ref AutoScaleDesiredCapacity
       TargetGroupARNs:
       - Ref: WebAppTargetGroup
   

@@ -2,5 +2,21 @@
     {
         "ParameterKey": "EnvironmentName",
         "ParameterValue": "Project2"
+    },
+    {
+        "ParameterKey": "ImgId",
+        "ParameterValue": "ami-0ac73f33a1888c64a"
+    },
+    {
+        "ParameterKey": "InstanceSize",
+        "ParameterValue": "t2.medium"
+    },
+    {
+        "ParameterKey": "InstanceEBSVolumeSize",
+        "ParameterValue": "10"
+    },
+    {
+        "ParameterKey": "AutoScaleDesiredCapacity",
+        "ParameterValue": "4"
     }
 ]
